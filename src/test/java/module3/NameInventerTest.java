@@ -8,6 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class NameInventerTest {
 
+    public static final String EMPTY_STRING = "";
     private  NameInventer nameInventer;
 
     @BeforeEach
@@ -25,6 +26,13 @@ public class NameInventerTest {
     @Test
     void shouldReturnEmptyStringWhenEmptyStringGiven() {
         String inverted = nameInventer.invert("");
-        assertThat(inverted).isEqualTo("");
+        assertThat(inverted).isEqualTo(EMPTY_STRING);
+    }
+
+    @Test
+    void shouldReturnEmptyStringWhenSpacesGiven() {
+        String inverted = nameInventer.invert("    ");
+        assertThat(inverted).isEqualTo(EMPTY_STRING);
+
     }
 }

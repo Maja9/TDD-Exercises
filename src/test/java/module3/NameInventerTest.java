@@ -18,9 +18,8 @@ public class NameInventerTest {
 
     @Test
     void shouldThrowExceptionWhenNullProvided() {
-        Assertions.assertThrows(NullPointerException.class, () ->{
-            nameInventer.invert(null);
-        });
+        Assertions.assertThrows(NullPointerException.class, () ->
+                nameInventer.invert(null));
     }
 
     @Test

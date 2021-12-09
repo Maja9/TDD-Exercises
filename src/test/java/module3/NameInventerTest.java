@@ -37,7 +37,7 @@ public class NameInventerTest {
     @Test
     void shouldReturnInvertedFirstAndLastName() {
         String inverted = nameInventer.invert("Jan Kowalski");
-        assertThat(inverted).isEqualTo("Kowalski Jan");
+        assertThat(inverted).isEqualTo("Kowalski, Jan");
 
     }
 }
